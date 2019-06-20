@@ -1,0 +1,196 @@
+/*
+	Theme Name: Semplice Child Theme
+	Theme URI: "my site url"
+	Description: Child Theme for Semplice
+	Author: Dilip Agheda
+	Template: semplice
+	Version: 1.0 
+*/
+
+/* Custom CSS Start */
+@font-face {
+	font-family: 'OpenSans';
+	src: url('./fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('./fonts/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-Italic.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-LightItalic.ttf') format('truetype'),
+		url('./fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
+	font-style: normal;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron {
+	background-image: url('./images/blog-header-bg.jpg');
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+	border-bottom: solid 1px #edeef2;
+	color: #167bcd;
+}
+
+.subscribe-button {
+    color: #167bcd;
+    width: auto;
+    border-radius: 50px;
+    border: solid 2px #167bcd;
+	background-color: transparent;
+	margin:auto 0;
+	padding:5px 20px;
+	text-align: center;
+}
+
+.subscribe-button span {
+	font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    color: inherit;
+    text-transform: uppercase;
+	font-weight: bold;
+	
+}
+
+.subscribe-button:hover {
+    cursor: pointer;
+	background-color: #167bcd;
+	color:white;
+}
+
+.blog-thumbnail
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-position: center center;
+	/* border: 5px solid red; */
+	
+}
+
+.blog-overlay {
+	/* background-color: black; */
+	/* opacity: 0.2; */
+
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.content-container {
+	position: relative;
+	z-index: 1;
+	color:white;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	padding:20px;
+}
+
+.content-container-normal {
+	/* position: relative; */
+	/* z-index: 1; */
+	/* color:white; */
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	/* height: 100%; */
+	padding:20px;
+}
+
+.size-small {
+	font-size:20px;
+	font-weight: 600;
+}
+.h1-size-big {
+	font-size: 40px;
+	font-weight: 200;
+}
+
+.category {
+	margin: 10px 0;
+}
+.divider{
+	height: 3px;
+	background-color:#167ACD;
+	width: 50px;
+	margin:10px 0;
+}
+.date {
+	border-right:2px solid #167ACD;
+	padding:0px 10px 0px 0px;
+}
+.reading-time {
+	margin-left:10px;
+	display:flex;
+}
+.content-subfooter {
+	display:flex;
+}
+.blog-normal .card{
+	position: relative;
+}
+.content-footer{
+	position: absolute;
+	bottom:30px;
+}
+.content-subfooter img {
+ /* color:white; */
+ /* background-color: white; */
+ height: 20px;
+
+ margin: auto 10px auto 0;
+}
+
+.margin-bottom-100{
+	margin-bottom:100px;
+}
+
+/* Modal */
+.blog-modal-header {
+	font-size: 30px;
+}
+.h-input {
+	width: 100%;
+	height:47px;
+	border: 1px solid #9a9eaa;
+	padding:15px 19px 16px 19px;
+	font-size:16px;
+	border-radius:3px;
+}
+.hs-button{
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: white;
+    border-radius: 50px;
+    border: solid 2px #167bcd;
+    background: #167bcd;
+    padding: 9px 19px 7px 19px;
+	font-size: 12px;
+	width:auto;
+}
+.modal-body {
+	padding:40px 150px 80px 150px;
+}
+/* Custom CSS End */
