@@ -8,7 +8,7 @@ function my_theme_enqueue_styles() {
     $parent_style = 'parent-style'; 
     $bootstrap = 'bootstrap';
       
-    if ( is_home() || is_singular('post') ) {
+    if ( is_home() || is_singular('post') || is_category()) {
       // blog page
       wp_enqueue_style( $bootstrap, get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.min.css' );
 
@@ -20,7 +20,8 @@ function my_theme_enqueue_styles() {
 
       //bootstrap script
       wp_enqueue_script( 'bootstrapjs', get_stylesheet_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), '4.0.0', true );
-
+      //ajax script
+      wp_enqueue_script('scriptjs',get_stylesheet_directory_uri() . '/script.js', array('jquery'),null,true);
     } else {
       //everything else
       wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
@@ -33,24 +34,32 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
 function process_email_form_data() {
+  global $wpdb;
 
   // form processing code here
   if (isset($_POST['email']))
   {
       $email = $_POST['email'];
-      $userdata = array(
-        'user_login' => $email,
-        'user_email' => $email,   //(string) The user email address.
-      );
+      
 
-    $user_id = wp_insert_user( $userdata ) ;
-    if( !is_wp_error( $user_id  ) ) {
-      add_user_meta( $user_id, 'wp_user_level', 0);
-      add_user_meta( $user_id, 'wp_capabilities', 'a:1:{s:10:"subscriber";b:1;}');
-    }else{
-      echo $user_id->get_error_message();
-    }
-    // wp_redirect(home_url());
+      $table_name = $wpdb->prefix . "subscriber_email"; 
+      $charset_collate = $wpdb->get_charset_collate();
+
+      $sql = "CREATE TABLE $table_name (
+        email varchar(100) NOT NULL UNIQUE,
+        PRIMARY KEY  (email)
+      ) $charset_collate;";
+
+      require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+      dbDelta( $sql );
+
+      $wpdb->insert( 
+        $table_name, 
+        array( 
+          'email' => $email, 
+        ) 
+      );
+      // wp_redirect(home_url());
   }
 
 }
