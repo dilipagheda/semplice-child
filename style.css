@@ -119,9 +119,20 @@ body {
 	font-size:20px;
 	font-weight: 600;
 }
+.size-small a{
+	color:#141416;
+}
+.size-small a:hover
+{
+	color:#167ACD;
+}
 .h1-size-big {
 	font-size: 40px;
 	font-weight: 200;
+}
+
+.h1-size-big a {
+	color:white;
 }
 
 .category {
@@ -192,5 +203,19 @@ body {
 }
 .modal-body {
 	padding:40px 150px 80px 150px;
+}
+.hero-one-category a,
+.hero-two-category a{
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size:12px;
+}
+.normal-category a,
+.hero-three-category a{
+	color:#7E8082;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size:12px;
 }
 /* Custom CSS End */
