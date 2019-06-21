@@ -7,13 +7,15 @@ $id = $current_post["ID"];
 					<article class="blog-normal h-100">
 						<div class="card p-3 h-100">
 								<div class="content-container-normal">
-									<span class="category">
-										<?php echo get_the_category($id)[0]->name ?>
+									<span class="normal-category">
+										<?php echo the_category('','',$id) ?>
 									</span>
 									<h1 class="size-small">
-										<?php echo get_the_title($id) ?>
+										<a href=<?php echo get_permalink($id)?>>
+											<?php echo get_the_title($id) ?>
+										</a>										
 									</h1>
-									<div class="divider mb-5"></div>
+									<div class="divider" style="margin-bottom:60px;"></div>
 
 									<div class="content-footer">
 										<span>
@@ -31,8 +33,9 @@ $id = $current_post["ID"];
 													$content = get_post_field('post_content', $id);
 													echo ceil(str_word_count(trim( strip_tags($content)))/200);
 													?> min read
-												</span>									</div>
+												</span>									
 											</div>
+										</div>
 									</div>
 								</div>
 								

@@ -1,20 +1,26 @@
 <?php 
 $id = $current_post["ID"];
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $current_post["ID"] ), 'single-post-thumbnail' ); 
+if(!$image){
+	$imageURL = 'https://via.placeholder.com/1200X900';
+}else{
+	$imageURL = $image[0];
+}
 ?>
 
 <div class="col-12 mt-3">
 					<article class="blog-hero-one">
 					<div class="card" style="height:450px">
-						<!-- <img class="card-img" src="<?php echo $image[0]; ?>" alt="Featured image"> -->
-						<div class="blog-thumbnail" style="background-image:url(<?php echo $image[0];?>)">
+						<div class="blog-thumbnail" style="background-image:url(<?php echo $imageURL;?>)">
 							<div class="blog-overlay"></div>
 							<div class="content-container">
-								<span>
-									<?php echo get_the_category($id)[0]->name ?>
+								<span class="hero-one-category">
+									<?php echo the_category('','',$id) ?>
 								</span>
 								<h1 class="h1-size-big">
-									<?php echo get_the_title($id) ?>
+									<a href=<?php echo get_permalink($id)?>>
+										<?php echo get_the_title($id) ?>
+									</a>
 								</h1>
 								<div class="divider margin-bottom-100"></div>
 								<div class="content-footer">
