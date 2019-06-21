@@ -17,29 +17,29 @@
 
 			<!-- Modal -->
 			<div class="modal fade p-5" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModal" aria-hidden="true">
-			<div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content p-2">
-				<div class="p-2">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-					<form method="post" action="<?php echo admin_url( 'admin-post.php' ) ?>">
-						<input type="hidden" name="action" value="process_email_form">
-						<div class="modal-body">
-							<div class="modal-inside d-flex flex-column align-items-center">
-								<h1 class="blog-modal-header m-3 w-100 text-center">Subscribe to our Blog</h1>
-								<div class="input m-3 w-100">
-									<input class="h-input" type="email" name="email" required="" placeholder="Your email here" value="" autocomplete="email">
-								</div>
-								<div class="pt-3">
-									<input type="submit" value="Subscribe" class="hs-button primary large">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content p-2">
+					<div class="p-2">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+						<form id="emailForm" method="post" action="<?php echo admin_url( 'admin-post.php' ) ?>">
+							<input type="hidden" name="action" value="process_email_form">
+							<div class="modal-body">
+								<div class="modal-inside d-flex flex-column align-items-center">
+									<h1 class="blog-modal-header m-3 w-100 text-center">Subscribe to our Blog</h1>
+									<div class="input m-3 w-100" id="emailDiv">
+										<input id="email" class="h-input" type="email" name="email" required="" placeholder="Your email here" value="" autocomplete="email">
+									</div>
+									<div class="pt-3" id="submitDiv">
+										<input id="submit" type="submit" value="Subscribe" class="hs-button primary large">
+									</div>
 								</div>
 							</div>
-						</div>
-					</form>
+						</form>
+					</div>
 				</div>
-			</div>
 			</div>
 		</div>
 	</div>
