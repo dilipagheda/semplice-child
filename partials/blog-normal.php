@@ -11,7 +11,7 @@ $id = $current_post["ID"];
 										<?php echo the_category('','',$id) ?>
 									</span>
 									<h1 class="size-small">
-										<a href=<?php echo get_permalink($id)?>>
+										<a href="<?php echo get_permalink($id)?>">
 											<?php echo get_the_title($id) ?>
 										</a>										
 									</h1>

@@ -1,6 +1,6 @@
 <?php 
-$id = $post->id;
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $current_post["ID"] ), 'single-post-thumbnail' ); 
+$id = $post->ID;
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'single-post-thumbnail' ); 
 if(!$image){
 	$imageURL = 'https://via.placeholder.com/1200X900';
 }else{
@@ -19,7 +19,7 @@ if(!$image){
 									<?php echo the_category('','',$id) ?>
 								</span>
 								<h1 class="h1-size-big">
-									<a href=<?php echo get_permalink($id)?>>
+									<a href="<?php echo get_permalink($id)?>">
 										<?php echo get_the_title($id) ?>
 									</a>								</h1>
 								<div class="divider margin-bottom-100"></div>
