@@ -12,7 +12,7 @@ if(!$image){
 <div class="col-12 col-lg-4 mt-3">
 					<article class="blog-post h-100">
 					<div class="card h-100">
-						<img style="height:200px;" class="card-img" src="<?php echo $imageURL; ?>" alt="Featured image">
+						<img style="height:200px;width:100%;object-fit:cover" class="card-img" src="<?php echo $imageURL; ?>" alt="Featured image">
 						<div class="content-container-normal">
 							<span class="hero-three-category">
 								<?php echo the_category('','',$id) ?>
