@@ -4,7 +4,7 @@
 <?php if(have_posts()) : ?>
 	
 <div class="container">
-	<div class="row mb-5 eq-posts-container">
+	<div class="row eq-posts-container">
 		<?php $count=0; while(have_posts()) : the_post(); 
 			render($count);
 			$count++;
