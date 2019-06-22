@@ -10,7 +10,11 @@ if ( !$title ) {
 		<div class="container m-auto">
 			<div class="row">
 				<div class="col-12 col-md-9 m-auto blog-header">
-					<h1 class="display-4"><?php echo $title ?></h1>
+					<a style="text-decoration:none" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+						<h1 class="display-4">
+							<?php echo $title ?>
+						</h1>
+					</a>
 				</div>
 				<div class="col-12 col-md-3 m-auto d-flex subscribe-button-container">
 					<!-- Button trigger modal -->
