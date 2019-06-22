@@ -201,9 +201,7 @@ body {
 	font-size: 12px;
 	width:auto;
 }
-.modal-body {
-	padding:40px 150px 80px 150px;
-}
+
 .hero-one-category a,
 .hero-two-category a{
 	color:white;
@@ -222,6 +220,10 @@ body {
 	padding-top:50px;
 	padding-bottom:100px;
 }
+.eq-load-more-container img{
+	display: block;
+	margin:auto;
+}
 .eq-load-more{
 	text-transform: uppercase;
 	color:#167bcd !important;
@@ -235,11 +237,14 @@ body {
 
  /* Extra small devices (portrait phones, less than 576px)
  No media query since this is the default in Bootstrap */
- .blog-header{
+.blog-header{
 	text-align: center;
 }
 .subscribe-button-container{
 	justify-content: center;
+}
+.modal-body {
+	padding:0;
 }
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -259,8 +264,10 @@ body {
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
- }
+	.modal-body {
+		padding:40px 150px 80px 150px;
+	}
+}
 
  /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
