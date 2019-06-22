@@ -1,6 +1,6 @@
 
 <?php 
-$id = $current_post["ID"];
+$id = $post->id;
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $current_post["ID"] ), 'single-post-thumbnail' ); 
 if(!$image){
 	$imageURL = 'https://via.placeholder.com/1200X900';
