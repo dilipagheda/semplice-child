@@ -7,13 +7,18 @@
 <?php get_header(); # inlude header ?>
 <section id="blog" class="fade-content">
 	<div class="jumbotron jumbotron-fluid">
-		<div class="container d-flex justify-content-between">
-			<h1 class="display-4">Blog</h1>
-			<!-- <h2><?php echo 'admin url:' . admin_url( 'admin-post.php' ); ?></h2> -->
-			<!-- Button trigger modal -->
-			<button type="button" class="subscribe-button btn btn-primary" data-toggle="modal" data-target="#subscribeModal">
-				<span>SUBSCRIBE TO OUR BLOG</span>
-			</button>
+		<div class="container m-auto">
+			<div class="row">
+				<div class="col-12 col-md-9 m-auto blog-header">
+					<h1 class="display-4">Blog</h1>
+				</div>
+				<div class="col-12 col-md-3 m-auto d-flex subscribe-button-container">
+					<!-- Button trigger modal -->
+					<button type="button" class="subscribe-button btn btn-primary" data-toggle="modal" data-target="#subscribeModal">
+						<span>SUBSCRIBE TO OUR BLOG</span>
+					</button>
+				</div>
+			</div>
 
 			<!-- Modal -->
 			<div class="modal fade p-5" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModal" aria-hidden="true">
@@ -44,5 +49,7 @@
 		</div>
 	</div>
 	<?php get_template_part('partials/blog-loop'); ?>
+	<?php get_template_part('partials/blog-pagination'); ?>
+
 </section>
 <?php get_footer(); # inlude footer ?>
