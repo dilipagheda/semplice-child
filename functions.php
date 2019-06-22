@@ -6,7 +6,9 @@
 include "custom-blog.php";
 
 function custom_posts_per_page( $query ) {
-      set_query_var('posts_per_page', 13);
+  if(!is_admin()){
+    set_query_var('posts_per_page', 13);
+  }
 }
 
 add_action( 'pre_get_posts', 'custom_posts_per_page' );
@@ -78,13 +80,17 @@ add_action( 'admin_post_process_email_form', 'process_email_form_data' );
 //Load more function
 add_action( 'wp_ajax_nopriv_eq_load_more', 'eq_load_more' );
 add_action( 'wp_ajax_eq_load_more', 'eq_load_more' );
+
+
 function eq_load_more() {
 	$paged = $_POST["page"]+1;
-	
+  $category = $_POST["category"];
+
 	$query = new WP_Query( array(
 		'post_type' => 'post',
     'paged' => $paged,
-    'posts_per_page'=>13
+    'posts_per_page'=>13,
+    'category_name'=>$category
 	) );
 	
   if( $query->have_posts() ):
