@@ -36,6 +36,7 @@ $(function () {
       
       var that = $(this);
       var page = $(this).data('page');
+      var category = $(this).data('category');
       var newPage = page+1;
       var ajaxurl = that.data('url');
       that.addClass('loading');
@@ -45,10 +46,9 @@ $(function () {
         url : ajaxurl,
         type : 'post',
         data : {
-          
           page : page,
-          action: 'eq_load_more'
-          
+          action: 'eq_load_more',
+          category: category
         },
         error : function( response ){
           console.log(response);
