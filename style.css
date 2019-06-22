@@ -227,7 +227,8 @@ body {
 .eq-load-more{
 	text-transform: uppercase;
 	color:#167bcd !important;
-	font-size:15px;
+	font-size:12px;
+	font-weight: bold;
 }
 .eq-load-more:hover{
 	text-transform: uppercase;
