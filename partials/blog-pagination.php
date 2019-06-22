@@ -1,10 +1,6 @@
-<div class="container pagination">
-	<div class="row">
-		<div class="previous span6">
-			<p><?php previous_posts_link(); ?></p>
-		</div>
-		<div class="next span6">
-			<p><?php next_posts_link(); ?></p>
-		</div>   
-	</div>
-</div>
+<div class="container text-center eq-load-more-container d-flex flex-column">
+		<a class="btn btn-lg btn-default eq-load-more" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+			Load More Posts
+		</a>
+		<img src=<?php echo get_stylesheet_directory_uri() . '/images/arrow-down.svg' ?> />
+</div><!-- .container -->
