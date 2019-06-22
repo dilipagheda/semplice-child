@@ -121,6 +121,7 @@ body {
 }
 .size-small a{
 	color:#141416;
+	text-decoration: none;
 }
 .size-small a:hover
 {
