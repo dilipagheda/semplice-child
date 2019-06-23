@@ -16,6 +16,4 @@ Design is inspired by surveygizmo (See the surveygizmo blog here - https://www.s
 This project is about designing a custom requested template for a complete Blog functionality. It has a blog home page , blog details page, subscribe
 functionality which stores email addresses to custom wordpress table, fully resposive across mobile, tablet and desktop, load more blogs functionality using AJAX.
 
-# Video
 
-![img](https://gfycat.com/jampackedcomfortablelemur.gif)
