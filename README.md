@@ -1,4 +1,6 @@
-# semplice-child-theme-blog - A custom blog theme for wordpress
+# A custom blog theme for wordpress
+
+![Image description](https://github.com/dilipagheda/semplice-child/blob/master/screenshot.png)
 
 A wordpress child theme for orignal theme called Semplice. This child theme implements custom blog - Home page and blog - details page. 
 Design is inspired by surveygizmo (See the surveygizmo blog here - https://www.surveygizmo.com/resources/blog/)
