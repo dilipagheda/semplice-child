@@ -18,4 +18,4 @@ functionality which stores email addresses to custom wordpress table, fully resp
 
 # Video
 
-(https://gfycat.com/jampackedcomfortablelemur.gif)
+![img](https://gfycat.com/jampackedcomfortablelemur.gif)
