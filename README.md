@@ -17,4 +17,5 @@ This project is about designing a custom requested template for a complete Blog 
 functionality which stores email addresses to custom wordpress table, fully resposive across mobile, tablet and desktop, load more blogs functionality using AJAX.
 
 # Video
-![Image description](https://github.com/dilipagheda/semplice-child/blob/master/video.mov)
+
+(https://gfycat.com/jampackedcomfortablelemur.gif)
