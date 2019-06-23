@@ -16,7 +16,7 @@ if(!$image){
 
 							<div class="content-container">
 								<span class="hero-two-category">
-									<?php echo the_category('','',$id) ?>
+									<?php echo the_category(' | ','',$id) ?>
 								</span>
 								<h1 class="h1-size-big">
 									<a href="<?php echo get_permalink($id)?>">
