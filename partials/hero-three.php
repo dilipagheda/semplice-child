@@ -15,7 +15,7 @@ if(!$image){
 						<img style="height:200px;width:100%;object-fit:cover" class="card-img" src="<?php echo $imageURL; ?>" alt="Featured image">
 						<div class="content-container-normal">
 							<span class="hero-three-category">
-								<?php echo the_category('','',$id) ?>
+								<?php echo the_category(' | ','',$id) ?>
 							</span>
 							<h1 class="size-small">
 								<a href="<?php echo get_permalink($id)?>">
