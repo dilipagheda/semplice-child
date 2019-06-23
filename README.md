@@ -17,3 +17,8 @@ This project is about designing a custom requested template for a complete Blog 
 functionality which stores email addresses to custom wordpress table, fully resposive across mobile, tablet and desktop, load more blogs functionality using AJAX.
 
 # Video
+<video width="618" height="347" controls preload> 
+    <source src="https://github.com/dilipagheda/semplice-child/blob/master/video.mov" media="only screen and (min-device-width: 568px)"></source> 
+    <source src="video.iphone.mp4" media="only screen and (max-device-width: 568px)"></source> 
+    <source src="video.webm"></source> 
+</video>
