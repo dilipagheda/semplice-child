@@ -64,10 +64,8 @@
 				echo webfonts($fontset_object, false);
 			}		
 		?>
-
-		<!-- <link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); # main stylesheet ?>/style.css"> -->
+		<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); # main stylesheet ?>/style.css">
 		<style type="text/css" id="semplice-custom-css"><?php require_once get_template_directory() . '/includes/custom_css.php'; # require custom-css ?></style>
-		
 		<?php if(get_field('favicon', 'options')) : ?>
 			<link rel="shortcut icon" href="<?php echo get_field('favicon', 'options'); ?>">
 		<?php endif; ?>
@@ -379,16 +377,16 @@
 			}
 			
 		?>
-		<!-- <header <?php echo $is_sticky; ?>>
-			<div id="navbar-bg" <?php echo $navbar_class; ?>></div>
+		<header <?php echo $is_sticky; ?>>
+			<div id="navbar-bg" <?php echo $navbar_class; ?>><!-- header bar background --></div>
 			<div id="navbar">
 			<?php
 				// output navbar html
 				echo $navbar_html;
 			?>
 			</div>
-		</header> -->
-		<!-- <div id="fullscreen-menu" <?php echo $full_height_menu; ?>>
+		</header>
+		<div id="fullscreen-menu" <?php echo $full_height_menu; ?>>
 			<div class="menu-inner">
 				<nav class="<?php echo $menu_font_size . ' ' . $dropdown_menu_font_weight; ?>">
 					<?php wp_nav_menu( array( 'container' => '', 'theme_location' => 'main-menu', 'menu_class' => 'menu' . $menu_class ) ); ?>
@@ -399,6 +397,6 @@
 					</ul>
 				</div>
 			</div>
-		</div> -->
+		</div>
 		<div id="wrapper">
 			<div id="content">
