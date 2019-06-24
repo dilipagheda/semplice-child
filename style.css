@@ -10,8 +10,7 @@
 /* Custom CSS Start */
 @font-face {
 	font-family: 'OpenSans';
-	src: url('./fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype'),
-		url('./fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype'),
+	src: 
 		url('./fonts/Open_Sans/OpenSans-Light.ttf') format('truetype'),
 		url('./fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype'),
 		url('./fonts/Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
@@ -20,16 +19,15 @@
 
 @font-face {
 	font-family: 'OpenSans';
-	src: url('./fonts/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype'),
-		url('./fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('truetype'),
+	src: 
 		url('./fonts/Open_Sans/OpenSans-Italic.ttf') format('truetype'),
 		url('./fonts/Open_Sans/OpenSans-LightItalic.ttf') format('truetype'),
 		url('./fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
-	font-style: normal;
+	font-style: italic;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'OpenSans', sans-serif;
 }
 
 .jumbotron {
@@ -42,10 +40,12 @@ body {
 }
 
 .subscribe-button {
-    color: #167bcd;
+	/* color: #167bcd; */
+	color:grey;
     /* width: auto; */
     border-radius: 50px;
-    border: solid 2px #167bcd;
+	/* border: solid 2px #167bcd; */
+	border: solid 2px grey;
 	background-color: transparent;
 	/* margin:auto 0; */
 	padding:5px 20px;
@@ -64,7 +64,8 @@ body {
 
 .subscribe-button:hover {
     cursor: pointer;
-	background-color: #167bcd;
+	/* background-color: #167bcd; */
+	background-color: grey;
 	color:white;
 }
 
@@ -244,6 +245,7 @@ body {
 }
 .subscribe-button-container{
 	justify-content: center;
+	padding-top:10px;
 }
 .modal-body {
 	padding:0;
