@@ -4,9 +4,6 @@
  * semplice.theme
  */
 ?>
-<?php get_header(); # inlude header ?>
-
-
 <?php 
 
 	$obj_id = get_queried_object_id();
@@ -23,6 +20,8 @@
 		$imageURL = $image[0];
 }
 ?>
+<?php get_header(); # inlude header ?>
+<section id="blog" class="fade-content p-0">
 <?php 
 	set_query_var('blog-title', 'Blog');
 	get_template_part('partials/blog-header'); 
@@ -35,8 +34,8 @@
 					<div class="blog-thumbnail" style="background-image:url(<?php echo $imageURL;?>)">
 						<div class="blog-overlay"></div>
 						<div class="content-container">
-							<span class="hero-one-category">
-								<?php echo the_category('','',$id) ?>
+							<span class="hero-one-category mb-3">
+								<?php echo the_category(' | ','',$id) ?>
 							</span>
 							<h1 class="h1-size-big">
 								<?php echo get_the_title($id) ?>
@@ -73,5 +72,5 @@
 		</div>
 	</div>
 </div>
-
+</section>
 <?php get_footer(); # inlude footer ?>
