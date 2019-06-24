@@ -12,7 +12,7 @@ if ( !$title ) {
 				<div class="col-12 col-md-9 m-auto blog-header">
 					<?php if($title=='Blog'): ?>
 						<a style="text-decoration:none" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-							<h1 class="display-4">
+							<h1 style="display:inline;color:grey" class="display-4">
 								<?php echo $title ?>
 							</h1>
 						</a>
