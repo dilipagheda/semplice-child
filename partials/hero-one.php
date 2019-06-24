@@ -14,7 +14,7 @@ if(!$image){
 			<div class="blog-thumbnail" style="background-image:url(<?php echo $imageURL;?>)">
 				<div class="blog-overlay"></div>
 				<div class="content-container">
-					<span class="hero-one-category">
+					<span class="hero-one-category mb-3">
 						<?php echo the_category(' | ','',$id) ?>
 					</span>
 					<h1 class="h1-size-big">

@@ -7,8 +7,8 @@ $id = $current_post["ID"];
 					<article class="blog-normal h-100">
 						<div class="card p-3 h-100">
 								<div class="content-container-normal">
-									<span class="normal-category">
-										<?php echo the_category('','',$id) ?>
+									<span class="normal-category mb-2">
+										<?php echo the_category(' | ','',$id) ?>
 									</span>
 									<h1 class="size-small">
 										<a href="<?php echo get_permalink($id)?>">
