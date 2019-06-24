@@ -93,6 +93,8 @@
 		<!-- bottom admin bar -->
 		<style>html{margin-top:0px!important;}#wpadminbar{top:auto!important;bottom:0;}}</style>
 	</head>
+	<?php     if ( is_home() || is_singular('post') || is_category()) {
+	?>
 		<!-- Modal -->
 		<div class="modal fade p-5" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModal" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
@@ -119,6 +121,7 @@
 			</div>
 		</div>
 	</div>
+	<?php }  ?>
 	<body <?php body_class(); ?>>
 		<?php if(get_post_type($post->ID) === 'work' || get_field('use_semplice') === 'coverslider' || get_field('project_panel_global', 'options') === 'enabled') : ?>
 		<div id="project-panel-header">
