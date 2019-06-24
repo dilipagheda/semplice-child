@@ -32,36 +32,36 @@ $(function () {
     });
 
     /* Ajax functions */
-    $(document).on('click','.eq-load-more:not(.loading)', function(){
+    // $(document).on('click','.eq-load-more:not(.loading)', function(){
       
-      var that = $(this);
-      var page = $(this).data('page');
-      var category = $(this).data('category');
-      var newPage = page+1;
-      var ajaxurl = that.data('url');
-      that.addClass('loading');
-      that.text("Loading...");
-      $.ajax({
+    //   var that = $(this);
+    //   var page = $(this).data('page');
+    //   var category = $(this).data('category');
+    //   var newPage = page+1;
+    //   var ajaxurl = that.data('url');
+    //   that.addClass('loading');
+    //   that.text("Loading...");
+    //   $.ajax({
         
-        url : ajaxurl,
-        type : 'post',
-        data : {
-          page : page,
-          action: 'eq_load_more',
-          category: category
-        },
-        error : function( response ){
-          console.log(response);
-        },
-        success : function( response ){
+    //     url : ajaxurl,
+    //     type : 'post',
+    //     data : {
+    //       page : page,
+    //       action: 'eq_load_more',
+    //       category: category
+    //     },
+    //     error : function( response ){
+    //       console.log(response);
+    //     },
+    //     success : function( response ){
           
-          that.data('page', newPage);
-          $('.eq-posts-container').append( response );
-          that.removeClass('loading');
-          that.text("Load More Posts");
-        }
+    //       that.data('page', newPage);
+    //       $('.eq-posts-container').append( response );
+    //       that.removeClass('loading');
+    //       that.text("Load More Posts");
+    //     }
         
-      });
+    //   });
       
-    });
+    // });
   });
