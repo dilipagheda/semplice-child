@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); # inlude header ?>
-<section>
+<section id="blog" class="fade-content">
 	<?php 
 		if ( is_month() ) : 
 			$title =  __('Archives for ', 'semplice') . get_the_date( __( 'F Y', 'semplice')); 

@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); # inlude header ?>
-<section>
+<section id="blog" class="fade-content">
 	<?php 
 		set_query_var('blog-title', 'Blog');
 		get_template_part('partials/blog-header'); 
