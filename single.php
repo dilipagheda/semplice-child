@@ -68,7 +68,25 @@
 		</div>
 
 		<div class="col-10 pt-5 pb-5 m-auto">
-			<?php echo $content ?>
+			<?php //echo $content 
+			
+					// Remove wpautop
+					remove_filter('the_content', 'wpautop');
+					
+					// get content			
+					//$content = get_post_meta( $post_id, 'semplice_ce_content', true );
+
+					// strip out double quotes on bg images
+					$content = remove_esc_bg_quotes($content);
+					
+					// output content
+					$output = apply_filters('the_content', $content);
+
+					echo $output;
+					
+					// reset postdata
+					wp_reset_postdata();
+			?>
 		</div>
 	</div>
 </div>
